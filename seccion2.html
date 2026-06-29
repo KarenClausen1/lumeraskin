@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Optimización SEO: Metadatos y URLs amigables -->
+    <meta name="description" content="Contactate con Luméra Skin. Estamos para ayudarte y acompañarte en tu rutina de skincare facial.">
+    <title>Contacto - Luméra Skin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS (Base) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Hoja de estilos compilada desde SCSS ubicada en carpeta correspondiente[cite: 1] -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Uso de etiqueta semántica HEADER[cite: 1] -->
+    <header class="sticky-top bg-white border-bottom custom-border">
+        <!-- Componente JS de Bootstrap 1: Navbar Collapse[cite: 1] -->
+        <div class="container-xl px-4 py-3 d-flex align-items-center justify-content-between">
+            <div>
+                <!-- Jerarquía correcta de títulos H1[cite: 1] -->
+                <h1 class="mb-0 tracking-wide text-md-3xl text-2xl font-dm-serif">Luméra Skin</h1>
+                <p class="text-muted-custom small-tag mb-0">Cuida tu piel. Ilumina tu esencia.</p>
+            </div>
+
+            <button class="navbar-toggler d-md-none border-0 bg-transparent fs-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                ☰
+            </button>
+
+            <nav class="collapse navbar-collapse flex-grow-0 d-none d-md-block" id="mainNav">
+                <ul class="navbar-nav d-flex flex-row gap-4 font-medium text-sm">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Solar</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="rutina.html">Rutina</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Antiage</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark active" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="d-flex gap-3 fs-5">
+                <span role="button">♡</span>
+                <span role="button">🛒</span>
+            </div>
+        </div>
+        
+        <!-- Menú Mobile -->
+        <div class="collapse d-md-none" id="mainNav">
+            <ul class="navbar-nav bg-white px-4 py-3 border-top custom-border font-medium text-sm">
+                <li class="nav-item"><a class="nav-link text-dark" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="rutina.html">Rutina</a></li>
+                <li class="nav-item"><a class="nav-link text-dark active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Uso de etiqueta semántica MAIN[cite: 1] -->
+    <main>
+        <!-- HERO (Imagen referenciada: Captura de pantalla de 2026-06-29 12-28-01.jpg) -->
+        <section class="hero-contacto py-5 py-md-5 text-center d-flex align-items-center">
+            <div class="container-xl px-4 py-5 my-md-5">
+                <div class="mx-auto" style="max-width: 800px;">
+                    <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-4 fw-bold">Contacto</p>
+                    <h2 class="display-4 font-dm-serif mb-4 text-dark">¿Tenés alguna consulta?</h2>
+                    <p class="text-dark fs-6 fs-md-5 leading-relaxed mb-0 fw-medium">Estamos para ayudarte y acompañarte en tu rutina de skincare.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 py-md-5">
+            <div class="container-xl px-4 my-md-4">
+                <div class="row g-5">
+                    
+                    <!-- FORMULARIO -->
+                    <div class="col-12 col-md-6">
+                        <div class="bg-secondary-custom border custom-border rounded-4 p-4 p-md-5">
+                            <h3 class="h2 font-dm-serif mb-4 mb-md-5">Envianos tu consulta</h3>
+                            
+                            <!-- Componente JS de Bootstrap 2: Alert (Oculto por defecto)[cite: 1] -->
+                            <div class="alert alert-success d-none alert-dismissible fade show" id="formAlert" role="alert">
+                                Formulario validado correctamente.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                            </div>
+
+                            <form id="contactForm" class="d-flex flex-column gap-3 gap-md-4">
+                                <input type="text" id="nombre" placeholder="Nombre" class="form-control form-control-lg bg-white border custom-border px-4 py-3 shadow-none fs-6" required>
+                                <input type="email" id="email" placeholder="Correo electrónico" class="form-control form-control-lg bg-white border custom-border px-4 py-3 shadow-none fs-6" required>
+                                <input type="text" id="asunto" placeholder="Asunto" class="form-control form-control-lg bg-white border custom-border px-4 py-3 shadow-none fs-6" required>
+                                <textarea id="mensaje" placeholder="Escribí tu mensaje" rows="6" class="form-control form-control-lg bg-white border custom-border px-4 py-3 shadow-none fs-6" required></textarea>
+                                <button type="submit" class="btn btn-accent text-uppercase tracking-wide px-5 py-3 w-100">Enviar consulta</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- INFO ALTERNATIVA -->
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                        <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-4">Contacto alternativo</p>
+                        <h3 class="display-6 font-dm-serif mb-4 mb-md-5">También podés encontrarnos acá</h3>
+                        
+                        <div class="row g-3 row-cols-1 row-cols-sm-3 row-cols-md-1">
+                            <div class="col">
+                                <div class="border custom-border rounded-4 p-4 h-100">
+                                    <h4 class="font-dm-serif h5 fw-semibold mb-2">WhatsApp</h4>
+                                    <p class="text-muted-custom mb-0 fs-6">+54 9 342 555 5555</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="border custom-border rounded-4 p-4 h-100">
+                                    <h4 class="font-dm-serif h5 fw-semibold mb-2">Correo electrónico</h4>
+                                    <p class="text-muted-custom mb-0 fs-6">hola@lumeraskin.com.ar</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="border custom-border rounded-4 p-4 h-100">
+                                    <h4 class="font-dm-serif h5 fw-semibold mb-2">Redes sociales</h4>
+                                    <!-- Componente JS de Bootstrap 3: Tooltips[cite: 1] -->
+                                    <p class="text-muted-custom mb-0 fs-6">
+                                        <a href="#" class="text-decoration-none text-muted-custom" data-bs-toggle="tooltip" data-bs-placement="top" title="Seguinos en Instagram">Instagram</a> — 
+                                        <a href="#" class="text-decoration-none text-muted-custom" data-bs-toggle="tooltip" data-bs-placement="top" title="Mirá nuestros videos">TikTok</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Componente JS de Bootstrap 4: Modal (Confirmación de envío)[cite: 1] -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title font-dm-serif h3" id="successModalLabel">¡Mensaje enviado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted-custom">Gracias por contactarte con Luméra Skin. Te responderemos a la brevedad.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-accent px-4" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Uso de etiqueta semántica FOOTER[cite: 1] -->
+    <footer class="bg-white border-top custom-border py-5 mt-auto">
+        <div class="container-xl px-4 mt-md-4">
+            <div class="row g-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-dm-serif fs-3 mb-3">Luméra Skin</h4>
+                    <p class="text-muted-custom small leading-relaxed">Skincare facial premium pensado para acompañar tu rutina diaria.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-dm-serif">Categorías</h5>
+                    <ul class="list-unstyled text-muted-custom small space-y-2">
+                        <li class="mb-2">Protección Solar</li>
+                        <li class="mb-2">Rutina</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-dm-serif">Contacto</h5>
+                    <ul class="list-unstyled text-muted-custom small space-y-2">
+                        <li class="mb-2">hola@lumeraskin.com.ar</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top custom-border pt-4 text-center text-muted-custom small">
+                © 2026 Luméra Skin — Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Captura de eventos JS exigida por el TP[cite: 1] -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar Tooltips (Requisito: Componentes JS)[cite: 1]
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Captura del evento Submit del formulario[cite: 1]
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Evita que la página se recargue
+
+                // Mostrar el Alert 
+                const formAlert = document.getElementById('formAlert');
+                formAlert.classList.remove('d-none');
+
+                // Mostrar el Modal
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+
+                // Limpiar el formulario
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

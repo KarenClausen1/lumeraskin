@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutina - Luméra Skin</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (Compilado desde SCSS) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="sticky-top bg-white border-bottom custom-border">
+        <div class="container-xl px-4 py-3 d-flex align-items-center justify-content-between">
+            <div>
+                <h1 class="mb-0 tracking-wide text-md-3xl text-2xl font-serif">Luméra Skin</h1>
+                <p class="text-muted-custom small-tag mb-0">Cuida tu piel. Ilumina tu esencia.</p>
+            </div>
+
+            <!-- Botón Mobile -->
+            <button class="navbar-toggler d-md-none border-0 bg-transparent fs-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <!-- Nav Desktop / Tablet -->
+            <nav class="collapse navbar-collapse flex-grow-0 d-none d-md-block" id="mainNav">
+                <ul class="navbar-nav d-flex flex-row gap-4 font-medium text-sm">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Solar</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Rutina</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Antiage</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="d-flex gap-3 fs-5">
+                <span role="button">♡</span>
+                <span role="button">🛒</span>
+            </div>
+        </div>
+        <!-- Menú colapsable para mobile -->
+        <div class="collapse d-md-none" id="mainNavMobile">
+            <ul class="navbar-nav bg-white px-4 py-3 border-top custom-border font-medium text-sm">
+                <li class="nav-item"><a class="nav-link text-dark" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Solar</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Rutina</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Antiage</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-primary-custom">
+        <div class="container-xl px-4 py-5 py-md-5">
+            <div class="row align-items-center g-5 py-md-5">
+                <div class="col-md-6 order-1 order-md-1">
+                    <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-4">Rutina facial</p>
+                    <h2 class="display-4 font-serif leading-tight mb-4">Tu momento de cuidado comienza acá.</h2>
+                    <p class="text-muted-custom fs-6 fs-md-5 leading-relaxed mb-0">Descubrí una rutina simple y efectiva para hidratar, proteger y revitalizar tu piel diariamente.</p>
+                </div>
+                <div class="col-md-6 order-2 order-md-2">
+                    <img src="https://i.pinimg.com/1200x/ff/e4/31/ffe431a279388d674a8e127da9321437.jpg" alt="Rutina Facial" class="img-fluid hero-img rounded-4 shadow-sm w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASOS -->
+    <section class="py-5 py-md-5 my-md-4">
+        <div class="container-xl px-4">
+            <div class="text-center mb-5">
+                <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-3">Pasos esenciales</p>
+                <h3 class="display-6 font-serif">Construí tu rutina ideal</h3>
+            </div>
+
+            <div class="row g-4">
+                <!-- Paso 1 -->
+                <div class="col-12 col-md-6">
+                    <div class="border custom-border rounded-4 p-4 p-md-5 bg-white h-100 d-flex flex-column align-items-start">
+                        <p class="small-tag text-uppercase tracking-widest mb-4" style="color: #C9847A;">Paso 01</p>
+                        <h4 class="h3 font-serif mb-3">Limpieza Facial</h4>
+                        <p class="text-muted-custom leading-relaxed mb-4 flex-grow-1">Eliminá impurezas y prepará tu piel.</p>
+                        <button class="btn btn-accent text-uppercase tracking-wide px-4 py-2 small w-100 w-md-auto mt-auto">Ver más</button>
+                    </div>
+                </div>
+                <!-- Paso 2 -->
+                <div class="col-12 col-md-6">
+                    <div class="border custom-border rounded-4 p-4 p-md-5 bg-white h-100 d-flex flex-column align-items-start">
+                        <p class="small-tag text-uppercase tracking-widest mb-4" style="color: #C9847A;">Paso 02</p>
+                        <h4 class="h3 font-serif mb-3">Hidratación</h4>
+                        <p class="text-muted-custom leading-relaxed mb-4 flex-grow-1">Mantené la piel suave y equilibrada.</p>
+                        <button class="btn btn-accent text-uppercase tracking-wide px-4 py-2 small w-100 w-md-auto mt-auto">Ver más</button>
+                    </div>
+                </div>
+                <!-- Paso 3 -->
+                <div class="col-12 col-md-6">
+                    <div class="border custom-border rounded-4 p-4 p-md-5 bg-white h-100 d-flex flex-column align-items-start">
+                        <p class="small-tag text-uppercase tracking-widest mb-4" style="color: #C9847A;">Paso 03</p>
+                        <h4 class="h3 font-serif mb-3">Protección Solar</h4>
+                        <p class="text-muted-custom leading-relaxed mb-4 flex-grow-1">Protegé tu piel diariamente del sol.</p>
+                        <button class="btn btn-accent text-uppercase tracking-wide px-4 py-2 small w-100 w-md-auto mt-auto">Ver más</button>
+                    </div>
+                </div>
+                <!-- Paso 4 -->
+                <div class="col-12 col-md-6">
+                    <div class="border custom-border rounded-4 p-4 p-md-5 bg-white h-100 d-flex flex-column align-items-start">
+                        <p class="small-tag text-uppercase tracking-widest mb-4" style="color: #C9847A;">Paso 04</p>
+                        <h4 class="h3 font-serif mb-3">Antiage</h4>
+                        <p class="text-muted-custom leading-relaxed mb-4 flex-grow-1">Ayudá a prevenir líneas de expresión.</p>
+                        <button class="btn btn-accent text-uppercase tracking-wide px-4 py-2 small w-100 w-md-auto mt-auto">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="bg-secondary-custom py-5 py-md-5">
+        <div class="container-xl px-4 my-md-4">
+            <div class="mb-5">
+                <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-3">Productos recomendados</p>
+                <h3 class="display-6 font-serif mb-0">Tu rutina completa</h3>
+            </div>
+
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/2a/00/2a/2a002ab487a583bff9c92e255220bb6b.jpg" class="card-img-top product-img w-100" alt="Eau Thermale Avène">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">Indicado para calmar irritación y enrojecimiento</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">Eau Thermale Avène</h4>
+                            <p class="fw-bold mb-4">$67.599</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small mt-auto">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/ee/b4/9c/eeb49c06a494c0d71d1ea8a756d9d657.jpg" class="card-img-top product-img w-100" alt="Equilib Eau Briller Creme">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">Equilibra y refuerza la barrera natural</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">Equilib Eau Briller Creme</h4>
+                            <p class="fw-bold mb-4">$98.400</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small mt-auto">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/cd/06/75/cd067510f2162b731058c323e4a7fd77.jpg" class="card-img-top product-img w-100" alt="Madagascar Centella Skin1004">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">Fórmula suave para pieles reactivas</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">Madagascar Centella Skin1004</h4>
+                            <p class="fw-bold mb-4">$65.950</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small mt-auto">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="http://i.pinimg.com/1200x/1d/30/22/1d3022eb73f0a124ddec753c177861b0.jpg" class="card-img-top product-img w-100" alt="La Roche-Posay Hyalu B5">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">Reduce sensibilidad y sensación de tirantez</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">La Roche-Posay Hyalu B5</h4>
+                            <p class="fw-bold mb-4">$86.999</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small mt-auto">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-primary-custom py-5 py-md-5">
+        <div class="container-xl px-4 py-md-4 text-center">
+            <div class="mx-auto" style="max-width: 768px;">
+                <h3 class="display-6 font-serif mb-4">Comenzá hoy tu rutina ideal</h3>
+                <p class="text-muted-custom leading-relaxed mb-5">Explorá productos pensados para cada etapa del cuidado facial.</p>
+                <button class="btn btn-accent text-uppercase tracking-wide px-5 py-3 w-100 w-md-auto">Explorar productos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top custom-border py-5 mt-auto">
+        <div class="container-xl px-4 mt-md-4">
+            <div class="row g-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-serif fs-3 mb-3">Luméra Skin</h4>
+                    <p class="text-muted-custom small leading-relaxed">Skincare facial premium pensado para acompañar tu rutina diaria.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-serif">Categorías</h5>
+                    <ul class="list-unstyled text-muted-custom small space-y-2">
+                        <li class="mb-2">Protección Solar</li>
+                        <li class="mb-2">Hidratación</li>
+                        <li class="mb-2">Antiage</li>
+                        <li class="mb-2">Limpieza</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-serif">Contacto</h5>
+                    <ul class="list-unstyled text-muted-custom small space-y-2">
+                        <li class="mb-2">hola@lumeraskin.com.ar</li>
+                        <li class="mb-2">Instagram</li>
+                        <li class="mb-2">TikTok</li>
+                        <li class="mb-2">WhatsApp</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-serif">Medios de pago</h5>
+                    <div class="d-flex gap-3 fs-3">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top custom-border pt-4 text-center text-muted-custom small">
+                © 2026 Luméra Skin — Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,171 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Luméra Skin | Skincare Premium</title>
-
-    <meta name="description"
-        content="Descubrí productos premium para el cuidado facial. Hidratación, protección solar, limpieza y antiage para todo tipo de piel.">
-
-    <meta name="keywords" content="skincare, cuidado facial, hidratación, protector solar, antiage, limpieza facial">
-
-    <meta name="author" content="Karen Clausen - Sofía Fernández">
-
+    <title>Luméra Skin</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
-        rel="stylesheet">
-
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (Compilado desde SCSS) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header class="sticky-top bg-white border-bottom">
-
-        <nav class="navbar navbar-expand-lg py-3">
-
-            <div class="container">
-
-                <!-- LOGO -->
-
-                <div class="navbar-brand mb-0">
-
-                    <h1 class="fs-2 mb-0">
-                        Luméra Skin
-                    </h1>
-
-                    <small class="text-secondary">
-                        Cuida tu piel. Ilumina tu esencia.
-                    </small>
-
-                </div>
-
-                <!-- BOTON MOBILE -->
-
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#menuMobile">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
-
-                <!-- MENU DESKTOP -->
-
-                <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
-
-                    <ul class="navbar-nav gap-lg-4">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">
-                                Inicio
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="skincare.html">
-                                Solar
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="skincare.html">
-                                Hidratación
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="skincare.html">
-                                Antiage
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="skincare.html">
-                                Limpieza
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">
-                                Contacto
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <!-- ICONOS -->
-
-                <div class="d-none d-lg-flex gap-3 fs-4">
-
-                    <span>♡</span>
-
-                    <span>🛒</span>
-
-                </div>
-
+    <!-- HEADER -->
+    <header class="sticky-top bg-white border-bottom custom-border">
+        <div class="container-xl px-4 py-3 d-flex align-items-center justify-content-between">
+            <div>
+                <h1 class="mb-0 tracking-wide text-md-3xl text-2xl">Luméra Skin</h1>
+                <p class="text-muted-custom small-tag mb-0">Cuida tu piel. Ilumina tu esencia.</p>
             </div>
 
-        </nav>
-
-    </header>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMobile">
-
-        <div class="offcanvas-header">
-
-            <h5 class="offcanvas-title">
-                Luméra Skin
-            </h5>
-
-            <button class="btn-close" data-bs-dismiss="offcanvas">
+            <!-- Botón Mobile -->
+            <button class="navbar-toggler d-md-none border-0 bg-transparent fs-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                ☰
             </button>
 
+            <!-- Nav Desktop / Tablet -->
+            <nav class="collapse navbar-collapse flex-grow-0 d-none d-md-block" id="mainNav">
+                <ul class="navbar-nav d-flex flex-row gap-4 font-medium text-sm">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Solar</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Hidratación</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Antiage</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Limpieza</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="d-flex gap-3 fs-5">
+                <span role="button">♡</span>
+                <span role="button">🛒</span>
+            </div>
         </div>
-
-        <div class="offcanvas-body">
-
-            <ul class="navbar-nav">
-
-                <li class="nav-item mb-2">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-
-                <li class="nav-item mb-2">
-                    <a class="nav-link" href="skincare.html">Solar</a>
-                </li>
-
-                <li class="nav-item mb-2">
-                    <a class="nav-link" href="skincare.html">Hidratación</a>
-                </li>
-
-                <li class="nav-item mb-2">
-                    <a class="nav-link" href="skincare.html">Antiage</a>
-                </li>
-
-                <li class="nav-item mb-2">
-                    <a class="nav-link" href="skincare.html">Limpieza</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-
+        <!-- Menú colapsable para mobile -->
+        <div class="collapse d-md-none" id="mainNav">
+            <ul class="navbar-nav bg-white px-4 py-3 border-top custom-border font-medium text-sm">
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Solar</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Hidratación</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Antiage</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Limpieza</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Contacto</a></li>
             </ul>
-
         </div>
+    </header>
 
-    </div>
+    <!-- HERO -->
+    <section class="bg-primary-custom">
+        <div class="container-xl px-4 py-5 py-md-5">
+            <div class="row align-items-center g-5 py-md-5">
+                <div class="col-md-6 order-2 order-md-1">
+                    <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-4">Skincare premium</p>
+                    <h2 class="display-4 font-serif leading-tight mb-4 mb-md-5">Tu ritual de belleza comienza aquí.</h2>
+                    <p class="text-muted-custom fs-6 fs-md-5 mb-5 leading-relaxed">Descubrí productos diseñados para hidratar, proteger y revitalizar tu piel.</p>
+                    <button class="btn btn-accent w-100 w-md-auto text-uppercase tracking-wide px-5 py-3">Ver productos</button>
+                </div>
+                <div class="col-md-6 order-1 order-md-2">
+                    <img src="https://i.pinimg.com/736x/04/97/e5/0497e549969bd58a3d5a662e7dff237d.jpg" alt="Hero Skincare" class="img-fluid hero-img rounded-4 shadow-sm w-100">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- CATEGORIAS -->
+    <section class="py-5 py-md-5 my-md-5">
+        <div class="container-xl px-4">
+            <div class="text-center mb-5">
+                <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-3">Categorías</p>
+                <h3 class="display-6 font-serif">Explorá por categoría</h3>
+            </div>
+            <div class="row g-4">
+                <!-- Categoría 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="category-card bg-primary-custom rounded-4 p-4 p-md-5 text-center shadow-sm">
+                        <img src="https://i.pinimg.com/736x/a8/91/75/a8917542426cc1a685f3e44178024a44.jpg" alt="Protección Solar" class="img-fluid category-img rounded-3 mb-4 w-100">
+                        <h4 class="font-medium h5 mb-0 font-serif">Protección Solar</h4>
+                    </div>
+                </div>
+                <!-- Categoría 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="category-card bg-primary-custom rounded-4 p-4 p-md-5 text-center shadow-sm">
+                        <img src="https://i.pinimg.com/1200x/65/33/03/65330366e9d2ee118d7acd6a933e0293.jpg" alt="Hidratación" class="img-fluid category-img rounded-3 mb-4 w-100">
+                        <h4 class="font-medium h5 mb-0 font-serif">Hidratación</h4>
+                    </div>
+                </div>
+                <!-- Categoría 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="category-card bg-primary-custom rounded-4 p-4 p-md-5 text-center shadow-sm">
+                        <img src="https://i.pinimg.com/736x/31/2c/80/312c8066b040e2b214b069dc9f770f59.jpg" alt="Antiage" class="img-fluid category-img rounded-3 mb-4 w-100">
+                        <h4 class="font-medium h5 mb-0 font-serif">Antiage</h4>
+                    </div>
+                </div>
+                <!-- Categoría 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="category-card bg-primary-custom rounded-4 p-4 p-md-5 text-center shadow-sm">
+                        <img src="https://i.pinimg.com/736x/ea/e3/3d/eae33d3c08c027fb31b0b564e44a0dbf.jpg" alt="Limpieza Facial" class="img-fluid category-img rounded-3 mb-4 w-100">
+                        <h4 class="font-medium h5 mb-0 font-serif">Limpieza Facial</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- PRODUCTOS -->
+    <section class="bg-secondary-custom py-5 py-md-5">
+        <div class="container-xl px-4 my-md-4">
+            <div class="d-flex align-items-end justify-content-between mb-5">
+                <div>
+                    <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-3">Productos destacados</p>
+                    <h3 class="display-6 font-serif mb-0">Más vendidos</h3>
+                </div>
+                <a href="#" class="text-dark small text-decoration-underline pb-2">Ver todos</a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/d0/3e/49/d03e49a224275c664a74782817306995.jpg" class="card-img-top product-img w-100" alt="Caudalíe Resveratrol">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">PIEL MADURA</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">Caudalíe Resveratrol Lift Crème</h4>
+                            <p class="fw-bold mb-4">$45.200</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//m/e/medik8-advanced-night-restore-rejuvenating-multi-ceramide-night-cream-50ml_1.jpg" class="card-img-top product-img w-100" alt="Medik8">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">PIEL SECA</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">Medik8 Advanced Multi Restore</h4>
+                            <p class="fw-bold mb-4">$56.999</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://acdn-us.mitiendanube.com/stores/006/229/701/products/artboard-814-67ea81ac82c34d89e417617835211398-1024-1024.webp" class="card-img-top product-img w-100" alt="Medicube">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">PIEL OLEOSA</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">Medicube PDRN Hydrating Gel</h4>
+                            <p class="fw-bold mb-4">$32.599</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card custom-border border rounded-4 h-100 overflow-hidden">
+                        <img src="https://yepposoonsoo.se/cdn/shop/files/AboutMe-Glycine-Soybean-Core-Cream.webp?v=1763461483&width=1214" class="card-img-top product-img w-100" alt="About Me">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-uppercase tracking-wide text-muted-custom small-tag mb-2">PIEL SENSIBLE</p>
+                            <h4 class="h6 font-serif mb-3 flex-grow-1">About Me Glycine Soybean Core</h4>
+                            <p class="fw-bold mb-4">$109.999</p>
+                            <button class="btn btn-accent w-100 text-uppercase tracking-wide py-2 small">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="py-5 my-md-5">
+        <div class="container-xl px-4">
+            <div class="row g-4 text-center">
+                <div class="col-12 col-md-4">
+                    <div class="border custom-border rounded-4 p-4 p-md-5">
+                        <div class="fs-2 mb-3">✦</div>
+                        <p class="fw-medium mb-0">Envíos a todo el país</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="border custom-border rounded-4 p-4 p-md-5">
+                        <div class="fs-2 mb-3">✦</div>
+                        <p class="fw-medium mb-0">Dermatológicamente testeado</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="border custom-border rounded-4 p-4 p-md-5">
+                        <div class="fs-2 mb-3">✦</div>
+                        <p class="fw-medium mb-0">Pago seguro y rápido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="bg-primary-custom py-5 py-md-5">
+        <div class="container-xl px-4 py-md-5 text-center">
+            <div class="mx-auto" style="max-width: 768px;">
+                <p class="text-uppercase tracking-widest text-muted-custom small-tag mb-3">Newsletter</p>
+                <h3 class="display-6 font-serif mb-4">Recibí tu guía de skincare gratuita</h3>
+                <p class="text-muted-custom mb-5">Suscribite para recibir novedades, lanzamientos y recomendaciones personalizadas.</p>
+                
+                <form class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+                    <input type="email" placeholder="Ingresá tu email" class="form-control form-control-lg bg-white border custom-border px-4 py-3 shadow-none">
+                    <button type="submit" class="btn btn-accent text-uppercase tracking-wide px-5 py-3 flex-shrink-0">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top custom-border py-5 mt-auto">
+        <div class="container-xl px-4 mt-md-4">
+            <div class="row g-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="font-serif fs-3 mb-3">Luméra Skin</h4>
+                    <p class="text-muted-custom small leading-relaxed">Skincare facial premium pensado para acompañar tu rutina diaria.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-serif">Categorías</h5>
+                    <ul class="list-unstyled text-muted-custom small space-y-2">
+                        <li class="mb-2">Protección Solar</li>
+                        <li class="mb-2">Hidratación</li>
+                        <li class="mb-2">Antiage</li>
+                        <li class="mb-2">Limpieza</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-serif">Contacto</h5>
+                    <ul class="list-unstyled text-muted-custom small space-y-2">
+                        <li class="mb-2">hola@lumeraskin.com.ar</li>
+                        <li class="mb-2">Instagram</li>
+                        <li class="mb-2">TikTok</li>
+                        <li class="mb-2">WhatsApp</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-4 font-serif">Medios de pago</h5>
+                    <div class="d-flex gap-3 fs-3">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top custom-border pt-4 text-center text-muted-custom small">
+                © 2026 Luméra Skin — Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
