@@ -1,11 +1,95 @@
-$primary: #C9847A;
-$secondary: #F5EDE4;
-$light: #FAF8F6;
+// ===================================================================
+// LUMÉRA SKIN — Variables Sass
+// Personalización de Bootstrap 5 mediante variables, previo al import
+// de bootstrap.scss. Paleta y tipografías extraídas del diseño TP1.
+// ===================================================================
 
-$border-radius: 1rem;
+// --- Paleta de colores del diseño original ---
+$lumera-white:      #FFFFFF;
+$lumera-text:        #2C2C2C;
+$lumera-gray:        #6B6B6B;
+$lumera-beige:        #F5EDE4;
+$lumera-beige-light:    #FAF8F6;
+$lumera-border:       #E8DDD0;
+$lumera-border-soft:    #D4C5B5;
+$lumera-terracota:     #C9847A;
 
-$font-family-base: 'DM Sans', sans-serif;
+// --- Tipografías ---
+$font-sans:  'DM Sans', sans-serif;
+$font-serif: 'DM Serif Display', serif;
 
-$headings-font-family: 'DM Serif Display', serif;
+// --- Sobreescritura de variables de Bootstrap ---
+$body-bg:      $lumera-white;
+$body-color:    $lumera-text;
+$font-family-base: $font-sans;
+$font-family-sans-serif: $font-sans;
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+$primary:  $lumera-terracota;
+$secondary: $lumera-gray;
+$light:   $lumera-beige-light;
+$dark:    $lumera-text;
+
+$theme-colors: (
+        "primary":  $primary,
+        "secondary": $secondary,
+        "success":  #4caf50,
+        "info":   #2196f3,
+        "warning":  #ff9800,
+        "danger":  #f44336,
+        "light":   $light,
+        "dark":    $dark
+);
+
+// --- Tipografía: tamaños base ---
+$headings-font-family: $font-serif;
+$headings-font-weight: 400;
+$headings-color:    $lumera-text;
+
+// --- Bordes y radios (el diseño usa esquinas muy redondeadas) ---
+$border-radius:    0.375rem;  // rounded-md
+$border-radius-lg:   0.75rem;   // rounded-xl
+$border-radius-xl:   1rem;    // rounded-2xl
+$border-radius-2xl:   1.5rem;   // rounded-3xl
+$border-color:     $lumera-border;
+
+// --- Botones ---
+$btn-border-radius:  $border-radius;
+$btn-padding-y:    .9rem;
+$btn-padding-x:    1.75rem;
+$btn-font-size:    .875rem;
+
+// --- Inputs ---
+$input-border-color:  $lumera-border-soft;
+$input-padding-y:   .9rem;
+$input-padding-x:   1.25rem;
+$input-border-radius: $border-radius;
+
+// --- Navbar ---
+$navbar-light-color:      $lumera-text;
+$navbar-light-hover-color:   $lumera-terracota;
+$navbar-light-active-color:  $lumera-terracota;
+
+// --- Grid: max-width tipo Tailwind (max-w-7xl = 80rem / 1280px) ---
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1280px
+);
+
+// --- Hero Contacto: imagen de fondo (placeholder temporal de Pinterest) ---
+// Para reemplazar por una imagen local: cambiar únicamente esta ruta
+// por, por ejemplo, "../img/hero-contacto.jpg" — no requiere tocar HTML ni CSS.
+$hero-contacto-bg-image: url("https://i.pinimg.com/1200x/4a/a1/2b/4aa12b3c9fd609ebc5e684b5660c269a.jpg");
+$hero-contacto-overlay-color: $lumera-beige;
+$hero-contacto-overlay-opacity: .7;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 360px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);

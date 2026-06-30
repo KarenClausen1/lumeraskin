@@ -1,70 +1,205 @@
-body{
-    color:#2C2C2C;
+// ===================================================================
+// LUMÉRA SKIN — Custom Sass
+// Clases propias para reproducir utilidades de Tailwind que Bootstrap
+// no ofrece de forma nativa (tracking, aspect-ratio, hover-lift, etc.)
+// ===================================================================
+
+// --- Fondos de sección (paleta propia) ---
+.bg-cream    { background-color: $lumera-beige; }
+.bg-cream-light { background-color: $lumera-beige-light; }
+.bg-terracota  { background-color: $lumera-terracota; }
+
+.text-muted-custom { color: $lumera-gray; }
+.text-terracota   { color: $lumera-terracota; }
+
+.border-custom    { border-color: $lumera-border !important; }
+
+// --- Tipografía / tracking (letter-spacing) ---
+.font-serif { font-family: $font-serif; }
+.font-sans { font-family: $font-sans; }
+
+.tracking-wide  { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-025em { letter-spacing: 0.25em; }
+.tracking-03em  { letter-spacing: 0.3em; }
+
+// --- Radios extendidos (Tailwind rounded-xl / 2xl / 3xl) ---
+.rounded-xl-custom { border-radius: $border-radius-lg !important; }
+.rounded-2xl-custom { border-radius: $border-radius-xl !important; }
+.rounded-3xl-custom { border-radius: $border-radius-2xl !important; }
+
+// --- Aspect ratios (Tailwind aspect-[4/5] y aspect-square) ---
+.aspect-4-5 {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+.aspect-square {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
-.hero{
-    background:#F5EDE4;
-}
-
-.section-title{
-
-    letter-spacing:.25rem;
-
-    text-transform:uppercase;
-
-    color:#6B6B6B;
-
-    font-size:.8rem;
-}
-
-.card-product{
-
-    border:1px solid #E8DDD0;
-
-    transition:.3s;
-}
-
-.card-product:hover{
-
-    transform:translateY(-4px);
-}
-
-.navbar-brand {
-
-    text-decoration: none;
-
-    h1 {
-
-        font-family: "DM Serif Display", serif;
-
-        color: #2C2C2C;
+// --- Hover lift (categorías) ---
+.hover-lift {
+    transition: transform .25s ease, box-shadow .25s ease;
+    &:hover {
+        transform: translateY(-4px);
     }
-
-    small {
-
-        color: #6B6B6B;
-    }
-
 }
 
-.nav-link {
+// --- Sombras suaves del diseño original ---
+.shadow-soft {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+}
 
-    color: #2C2C2C;
+// --- Header sticky ---
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+}
 
+// --- Logo / marca ---
+.brand-title {
+    font-family: $font-serif;
+    letter-spacing: .02em;
+}
+.brand-tagline {
+    font-size: .75rem;
+    color: $lumera-gray;
+}
+
+// --- Navegación principal ---
+.main-nav .nav-link {
+    color: $lumera-text;
     font-weight: 500;
+    font-size: .9rem;
+    padding: 0 .25rem;
 
-    transition: .3s;
-
+    &:hover,
+    &:focus,
+    &.active {
+        color: $lumera-terracota;
+    }
 }
 
-.nav-link:hover {
-
-    color: $primary;
-
+// --- Iconos de header (favoritos / carrito) ---
+.header-icons {
+    font-size: 1.25rem;
+    gap: 1rem;
 }
 
-.offcanvas {
-
-    background: white;
-
+// --- Botón hamburguesa mobile ---
+.btn-burger {
+    font-size: 1.5rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    color: $lumera-text;
 }
+
+// --- Botones del diseño (terracota, mayúsculas, tracking) ---
+.btn-lumera {
+    background-color: $lumera-terracota;
+    color: $lumera-white;
+    text-transform: uppercase;
+    font-size: .875rem;
+    letter-spacing: .025em;
+    border: none;
+    transition: opacity .2s ease;
+
+    &:hover,
+    &:focus {
+        background-color: $lumera-terracota;
+        color: $lumera-white;
+        opacity: .9;
+    }
+}
+
+// --- Eyebrow (texto superior en mayúsculas, ej "Skincare premium") ---
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-size: .8rem;
+    color: $lumera-gray;
+}
+
+// --- Tarjetas de categoría ---
+.card-categoria {
+    background-color: $lumera-beige;
+    border-radius: $border-radius-xl;
+    padding: 2rem;
+}
+
+// --- Tarjetas de producto ---
+.card-producto {
+    background-color: $lumera-white;
+    border: 1px solid $lumera-border;
+    border-radius: $border-radius-xl;
+    overflow: hidden;
+}
+
+// --- Tarjetas de paso (rutina, Skincare) ---
+.card-paso {
+    border: 1px solid $lumera-border;
+    border-radius: $border-radius-2xl;
+    padding: 2rem;
+    background-color: $lumera-white;
+}
+
+// --- Hero de Contacto (imagen de fondo + overlay beige semitransparente) ---
+.hero-contacto {
+    position: relative;
+    background-image:
+            linear-gradient(
+                    rgba($hero-contacto-overlay-color, $hero-contacto-overlay-opacity),
+                    rgba($hero-contacto-overlay-color, $hero-contacto-overlay-opacity)
+            ),
+            $hero-contacto-bg-image;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// --- Formulario de contacto ---
+.card-formulario {
+    background-color: $lumera-beige-light;
+    border: 1px solid $lumera-border;
+    border-radius: $border-radius-2xl;
+}
+
+// --- Tarjetas de contacto alternativo ---
+.card-contacto {
+    border: 1px solid $lumera-border;
+    border-radius: $border-radius-xl;
+}
+
+// --- Tarjetas de beneficio ---
+.card-beneficio {
+    border: 1px solid $lumera-border;
+    border-radius: $border-radius-xl;
+    text-align: center;
+    padding: 2rem;
+}
+
+// --- Input del newsletter ---
+.input-newsletter {
+    border: 1px solid $lumera-border-soft;
+    background-color: $lumera-white;
+    border-radius: $border-radius;
+}
+
+// --- Footer ---
+.footer-lumera {
+    background-color: $lumera-white;
+    border-top: 1px solid $lumera-border;
+}
+
+// --- Listas del footer ---
+.list-footer {
+    list-style: none;
+    padding-left: 0;
+    li { color: $lumera-gray; font-size: .9rem; margin-bottom: .5rem; }
+}
+
+// --- Iconos de pago / favoritos (emoji-based, tamaño consistente) ---
+.icon-emoji { font-size: 1.5rem; }
