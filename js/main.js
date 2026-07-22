@@ -5,23 +5,26 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    //con DOMContentLoaded obligamos a que el script se ejecute una vez que el DOM esté completamente cargado
+
     /* -----------------------------------------------------------------
      * 1. Botones "Agregar al carrito"
      * --------------------------------------------------------------- */
-    var botonesCarrito = document.querySelectorAll('.btn-agregar-carrito');
-    var toastEl = document.getElementById('toastCarrito');
-    var toastMensaje = document.getElementById('toastCarritoMensaje');
+    var botonesCarrito = document.querySelectorAll('.btn-agregar-carrito'); //querySelectorAll devuelve todos los elementos con la clase .btn-agregar-carrito. El resultado es una coleccion, un NodeList con todos los botones
+    var toastEl = document.getElementById('toastCarrito'); //busca el elemento con el id toastCarrito y lo guarda en la variable toastEl
+    var toastMensaje = document.getElementById('toastCarritoMensaje'); //busca el elemento con el id toastCarritoMensaje y lo guarda en la variable toastMensaje
     var toast = toastEl ? new bootstrap.Toast(toastEl, { delay: 2500 }) : null;
+    // operador ternario: si existe el elemento del Toast, crea una instancia de Bootstrap que se ocultara automaticamente después de 2500ms; si no existe, guarda null.
 
-    botonesCarrito.forEach(function (boton) {
-        boton.addEventListener('click', function (evento) {
+    botonesCarrito.forEach(function (boton) { //recorremos todos los botones
+        boton.addEventListener('click', function (evento) { //escuchamos el evento click de cada boton. El evento se ejecuta recien al hacer clic en el boton
             var producto = evento.currentTarget.dataset.producto || 'Producto';
 
             if (toastMensaje) {
-                toastMensaje.textContent = producto + ' se agregó al carrito.';
+                toastMensaje.textContent = producto + ' se agregó al carrito.'; //Obtiene el nombre del producto del boton; si no existe, usa "Producto"
             }
 
-            if (toast) {
+            if (toast) { // si el toast existe, bootstrap lo muestra
                 toast.show();
             }
         });

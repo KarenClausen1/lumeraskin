@@ -60,6 +60,7 @@
 </header>
 
 <!-- OFFCANVAS: menú mobile -->
+<!--offcanvas es una barra lateral oculta que se despliega desde los bordes de la pantalla. En este caso, desde el borde de la derecha de la pantalla-->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMobile" aria-labelledby="menuMobileLabel">
     <div class="offcanvas-header">
         <h2 class="offcanvas-title brand-title fs-4" id="menuMobileLabel">Luméra Skin</h2>
@@ -223,11 +224,11 @@
 </footer>
 
 <!-- TOAST: confirmación de envío de formulario / copiado de datos -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;"> <!--position fixed: el elemento queda fijo respecto de la ventana del navegador. botton: 0 y enn: 0 (o right: 0) lo posicionan en la esquina inferior derecha. El z index evita que el toast quede escondido detras de otro-->
     <div id="toastCarrito" class="toast align-items-center text-white bg-terracota border-0" role="status" aria-live="polite" aria-atomic="true">
-        <div class="d-flex">
+        <div class="d-flex"> <!--d-flex hace que el mensaje y la X para cerrarlo queden en la misma linea en fila por defecto-->
             <div class="toast-body" id="toastCarritoMensaje">Mensaje enviado correctamente.</div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button> <!--btn-close genera automaticamente la X. data-bs-dismiss="toast" sirve para que bootstrap cierre el mensaje cuando se clickea la X-->
         </div>
     </div>
 </div>

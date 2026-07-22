@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!--incluye metadatos que permiten describir correctamente el contenido del sitio y mejorar su visualizacion en motores de busqueda-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Rutina de Skincare | Pasos y Productos Recomendados — Luméra Skin</title>
     <meta name="description" content="Conocé los 4 pasos esenciales de una rutina de skincare: limpieza, hidratación, protección solar y antiage. Descubrí los productos recomendados por Luméra Skin.">
     <meta name="keywords" content="rutina skincare, limpieza facial, hidratación, protección solar, antiage, productos piel sensible, Luméra Skin">
@@ -52,7 +52,6 @@
                 </div>
 
                 <button class="btn-burger d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-controls="menuMobile" aria-label="Abrir menú de navegación">
-                    ☰
                 </button>
             </div>
 
@@ -283,12 +282,15 @@
 </footer>
 
 <!-- MODAL: detalle de cada paso de la rutina (componente Bootstrap JS #3) -->
-<div class="modal fade" id="modalPaso" tabindex="-1" aria-labelledby="modalPasoLabel" aria-hidden="true">
+<div class="modal fade" id="modalPaso" tabindex="-1" aria-labelledby="modalPasoLabel" aria-hidden="true"> <!--modal fade hace que el modal aparezca inmediatamente (distinto al fade in que hace que aparezca suavemente)-->
+    <!--    tabindex en -1 hace que el modal no reciba el foco de Tab, para que el usuario que navega con Tab quede atrapado dentro del modal-->
     <div class="modal-dialog modal-dialog-centered">
+<!--        modal-dialog-centered centra el modal verticalmente-->
         <div class="modal-content rounded-xl-custom">
             <div class="modal-header border-custom">
                 <h2 class="modal-title font-serif fs-3" id="modalPasoLabel">Paso</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <!--btn-close genera automaticamente la X. data-bs-dismiss="modal" sirve para que bootstrap cierre el mensaje cuando se clickea la X-->
             </div>
             <div class="modal-body">
                 <p class="text-muted-custom mb-0" id="modalPasoTexto">Detalle del paso.</p>
@@ -298,11 +300,11 @@
 </div>
 
 <!-- TOAST: confirmación de agregado al carrito -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;"> <!--position fixed: el elemento queda fijo respecto de la ventana del navegador. botton: 0 y enn: 0 (o right: 0) lo posicionan en la esquina inferior derecha. El z index evita que el toast quede escondido detras de otro-->
     <div id="toastCarrito" class="toast align-items-center text-white bg-terracota border-0" role="status" aria-live="polite" aria-atomic="true">
-        <div class="d-flex">
+        <div class="d-flex"> <!--d-flex hace que el mensaje y la X para cerrarlo queden en la misma linea en fila por defecto-->
             <div class="toast-body" id="toastCarritoMensaje">Producto agregado al carrito.</div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button> <!--btn-close genera automaticamente la X. data-bs-dismiss="toast" sirve para que bootstrap cierre el mensaje cuando se clickea la X-->
         </div>
     </div>
 </div>
