@@ -4,8 +4,20 @@
 // Compila a: ../css/style.css
 // ===================================================================
 
+/* =========================================================
+   Archivo principal SCSS del proyecto.
+
+   Importa variables y estilos personalizados.
+   Este archivo se compila automaticamente para generar
+   css/style.css, que es el archivo utilizado por el navegador.
+
+   Los cambios deben realizarse en los archivos SCSS,
+   no directamente en style.css.
+   ========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
 
 @import "variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "custom";
+

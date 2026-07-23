@@ -10,21 +10,21 @@ document.addEventListener('DOMContentLoaded', function () {
     /* -----------------------------------------------------------------
      * 1. Botones "Agregar al carrito"
      * --------------------------------------------------------------- */
-    var botonesCarrito = document.querySelectorAll('.btn-agregar-carrito'); //querySelectorAll devuelve todos los elementos con la clase .btn-agregar-carrito. El resultado es una coleccion, un NodeList con todos los botones
-    var toastEl = document.getElementById('toastCarrito'); //busca el elemento con el id toastCarrito y lo guarda en la variable toastEl
-    var toastMensaje = document.getElementById('toastCarritoMensaje'); //busca el elemento con el id toastCarritoMensaje y lo guarda en la variable toastMensaje
+    var botonesCarrito = document.querySelectorAll('.btn-agregar-carrito'); // querySelectorAll devuelve todos los elementos con la clase .btn-agregar-carrito. El resultado es una coleccion, un NodeList con todos los botones
+    var toastEl = document.getElementById('toastCarrito');                       // busca el elemento con el id toastCarrito y lo guarda en la variable toastEl
+    var toastMensaje = document.getElementById('toastCarritoMensaje');           // busca el elemento con el id toastCarritoMensaje y lo guarda en la variable toastMensaje
     var toast = toastEl ? new bootstrap.Toast(toastEl, { delay: 2500 }) : null;
     // operador ternario: si existe el elemento del Toast, crea una instancia de Bootstrap que se ocultara automaticamente después de 2500ms; si no existe, guarda null.
 
-    botonesCarrito.forEach(function (boton) { //recorremos todos los botones
-        boton.addEventListener('click', function (evento) { //escuchamos el evento click de cada boton. El evento se ejecuta recien al hacer clic en el boton
+    botonesCarrito.forEach(function (boton) {                                   // recorremos todos los botones
+        boton.addEventListener('click', function (evento) {                   // escuchamos el evento click de cada boton. El evento se ejecuta recien al hacer clic en el boton
             var producto = evento.currentTarget.dataset.producto || 'Producto';
 
             if (toastMensaje) {
-                toastMensaje.textContent = producto + ' se agregó al carrito.'; //Obtiene el nombre del producto del boton; si no existe, usa "Producto"
+                toastMensaje.textContent = producto + ' se agregó al carrito.';                         // obtiene el nombre del producto del boton; si no existe, usa "Producto"
             }
 
-            if (toast) { // si el toast existe, bootstrap lo muestra
+            if (toast) {                                                                                // si el toast existe, bootstrap lo muestra
                 toast.show();
             }
         });
@@ -33,47 +33,47 @@ document.addEventListener('DOMContentLoaded', function () {
     /* -----------------------------------------------------------------
      * 2. Formulario Newsletter
      * --------------------------------------------------------------- */
-    var formNewsletter = document.getElementById('form-newsletter');
+    var formNewsletter = document.getElementById('form-newsletter');      // busca el elemento con el id form-newsletter y lo guarda en la variable formNewsletter
 
-    if (formNewsletter) {
-        formNewsletter.addEventListener('submit', function (evento) {
+    if (formNewsletter) {                                                                       // si existe el formulario, agrega un evento submit. Ejecuta el codigo solo si el formulario existe
+        formNewsletter.addEventListener('submit', function (evento) { // Se ejecuta cuando el usuario envia el formulario
 
-            evento.preventDefault();
+            evento.preventDefault();                                                            // evita que el formulario se envie y recargue la pagina
 
-            if (!formNewsletter.checkValidity()) {
-                evento.stopPropagation();
-                formNewsletter.classList.add('was-validated');
+            if (!formNewsletter.checkValidity()) {                                              // Verifica si el formulario tiene errores de validacion
+                evento.stopPropagation();                                                       // Evita que el evento siga propagandose
+                formNewsletter.classList.add('was-validated');                                  // Agrega la clase que muestra los mensajes de validacion de Bootstrap
                 return;
             }
 
-            var emailInput = document.getElementById('newsletter-email');
+            var emailInput = document.getElementById('newsletter-email'); // busca el elemento con el id newsletter-email y lo guarda en la variable emailInput
 
             if (toastMensaje) {
-                toastMensaje.textContent = '¡Gracias por suscribirte, ' + emailInput.value + '!';
+                toastMensaje.textContent = '¡Gracias por suscribirte, ' + emailInput.value + '!'; // Muestra un mensaje personalizado con el email ingresado
             }
 
             if (toast) {
-                toast.show();
+                toast.show();                                                                     // Ejecuta el codigo solo si el formulario existe
             }
 
-            formNewsletter.reset();
-            formNewsletter.classList.remove('was-validated');
+            formNewsletter.reset();                                                               // Limpia los campos del formulario
+            formNewsletter.classList.remove('was-validated');                              // Quita los estilos de validacion para dejar el formulario como nuevo
         });
     }
 
     /* -----------------------------------------------------------------
      * 3. Offcanvas Mobile
      * --------------------------------------------------------------- */
-    var menuMobileEl = document.getElementById('menuMobile');
+    var menuMobileEl = document.getElementById('menuMobile');               // busca el elemento con el id menuMobile y lo guarda en la variable menuMobileEl
 
     if (menuMobileEl) {
 
-        var enlacesMenuMobile = menuMobileEl.querySelectorAll('a.nav-link');
-        var offcanvasInstancia = bootstrap.Offcanvas.getOrCreateInstance(menuMobileEl);
+        var enlacesMenuMobile = menuMobileEl.querySelectorAll('a.nav-link'); // busca todos los enlaces dentro del menu mobile y los guarda en la variable enlacesMenuMobile
+        var offcanvasInstancia = bootstrap.Offcanvas.getOrCreateInstance(menuMobileEl);                 // obtiene la instancia del offcanvas de Bootstrap o crea una nueva si no existe
 
-        enlacesMenuMobile.forEach(function (enlace) {
-            enlace.addEventListener('click', function () {
-                offcanvasInstancia.hide();
+        enlacesMenuMobile.forEach(function (enlace) {                            // recorre todos los enlaces del menu mobile
+            enlace.addEventListener('click', function () {                            // escucha el evento click de cada enlace
+                offcanvasInstancia.hide();                                                               // oculta el offcanvas cuando se hace clic en un enlace
             });
         });
     }

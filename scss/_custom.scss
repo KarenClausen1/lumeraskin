@@ -4,6 +4,14 @@
 // no ofrece de forma nativa (tracking, aspect-ratio, hover-lift, etc.)
 // ===================================================================
 
+/* =========================================================
+   Estilos personalizados de Lumera Skin.
+
+   Define componentes propios del proyecto como botones,
+   tarjetas, sombras, bordes y demas elementos visuales.
+   Utiliza las variables definidas en _variables.scss.
+   ========================================================= */
+
 // --- Fondos de sección (paleta propia) ---
 .bg-cream    { background-color: $lumera-beige; }
 .bg-cream-light { background-color: $lumera-beige-light; }
